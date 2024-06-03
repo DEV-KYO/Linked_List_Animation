@@ -6,15 +6,15 @@ project(Linked_List_Animation)
 add_executable(${PROJECT_NAME} main.cpp
         Application.h
         Application.cpp
-        TextBox/TextBox.h
-        TextBox/TextBox.cpp
-        TextBox/LetterObject.h
-        TextBox/LetterObject.cpp
-        TextBox/Label.h
-        TextBox/Label.cpp
-        TextBox/Cursor.h
-        TextBox/Cursor.cpp
-        TextBox/_LOCAL_CONSTANTS.h
+        Drawables/TextBox/TextBox.h
+        Drawables/TextBox/TextBox.cpp
+        Drawables/TextBox/LetterObject.h
+        Drawables/TextBox/LetterObject.cpp
+        Drawables/TextBox/Label.h
+        Drawables/TextBox/Label.cpp
+        Drawables/TextBox/Cursor.h
+        Drawables/TextBox/Cursor.cpp
+        Drawables/TextBox/_LOCAL_CONSTANTS.h
         States/States.h
         States/States.cpp
         States/EnumStates.h
@@ -35,6 +35,16 @@ add_executable(${PROJECT_NAME} main.cpp
         Font/EnumFonts.h
         Drawables/Arrowshape/Arrowshape.cpp
         Drawables/Arrowshape/Arrowshape.h
+        Drawables/EnumDrawables/EnumDirection.h
+        System.cpp
+        System.h
+        Drawables/EnumDrawables/EnumDrawables.h
+        Drawables/NodeShape/NodeShape.cpp
+        Drawables/NodeShape/NodeShape.h
+        LinkedList/LinkedList.cpp
+        LinkedList/LinkedList.h
+        LinkedList/Node.h
+
 )
 
 # CMake SFML Project uses C++17 features

@@ -63,33 +63,33 @@ build CMakeFiles/Linked_List_Animation.dir/Application.cpp.obj: CXX_COMPILER__Li
   OBJECT_DIR = CMakeFiles\Linked_List_Animation.dir
   OBJECT_FILE_DIR = CMakeFiles\Linked_List_Animation.dir
 
-build CMakeFiles/Linked_List_Animation.dir/TextBox/TextBox.cpp.obj: CXX_COMPILER__Linked_List_Animation_unscanned_Debug C$:/Users/jnmen/CLionProjects/Linked_List_Animation/TextBox/TextBox.cpp || cmake_object_order_depends_target_Linked_List_Animation
-  DEP_FILE = CMakeFiles\Linked_List_Animation.dir\TextBox\TextBox.cpp.obj.d
+build CMakeFiles/Linked_List_Animation.dir/Drawables/TextBox/TextBox.cpp.obj: CXX_COMPILER__Linked_List_Animation_unscanned_Debug C$:/Users/jnmen/CLionProjects/Linked_List_Animation/Drawables/TextBox/TextBox.cpp || cmake_object_order_depends_target_Linked_List_Animation
+  DEP_FILE = CMakeFiles\Linked_List_Animation.dir\Drawables\TextBox\TextBox.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
   INCLUDES = -isystem C:/SFML-2.6.1/include
   OBJECT_DIR = CMakeFiles\Linked_List_Animation.dir
-  OBJECT_FILE_DIR = CMakeFiles\Linked_List_Animation.dir\TextBox
+  OBJECT_FILE_DIR = CMakeFiles\Linked_List_Animation.dir\Drawables\TextBox
 
-build CMakeFiles/Linked_List_Animation.dir/TextBox/LetterObject.cpp.obj: CXX_COMPILER__Linked_List_Animation_unscanned_Debug C$:/Users/jnmen/CLionProjects/Linked_List_Animation/TextBox/LetterObject.cpp || cmake_object_order_depends_target_Linked_List_Animation
-  DEP_FILE = CMakeFiles\Linked_List_Animation.dir\TextBox\LetterObject.cpp.obj.d
+build CMakeFiles/Linked_List_Animation.dir/Drawables/TextBox/LetterObject.cpp.obj: CXX_COMPILER__Linked_List_Animation_unscanned_Debug C$:/Users/jnmen/CLionProjects/Linked_List_Animation/Drawables/TextBox/LetterObject.cpp || cmake_object_order_depends_target_Linked_List_Animation
+  DEP_FILE = CMakeFiles\Linked_List_Animation.dir\Drawables\TextBox\LetterObject.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
   INCLUDES = -isystem C:/SFML-2.6.1/include
   OBJECT_DIR = CMakeFiles\Linked_List_Animation.dir
-  OBJECT_FILE_DIR = CMakeFiles\Linked_List_Animation.dir\TextBox
+  OBJECT_FILE_DIR = CMakeFiles\Linked_List_Animation.dir\Drawables\TextBox
 
-build CMakeFiles/Linked_List_Animation.dir/TextBox/Label.cpp.obj: CXX_COMPILER__Linked_List_Animation_unscanned_Debug C$:/Users/jnmen/CLionProjects/Linked_List_Animation/TextBox/Label.cpp || cmake_object_order_depends_target_Linked_List_Animation
-  DEP_FILE = CMakeFiles\Linked_List_Animation.dir\TextBox\Label.cpp.obj.d
+build CMakeFiles/Linked_List_Animation.dir/Drawables/TextBox/Label.cpp.obj: CXX_COMPILER__Linked_List_Animation_unscanned_Debug C$:/Users/jnmen/CLionProjects/Linked_List_Animation/Drawables/TextBox/Label.cpp || cmake_object_order_depends_target_Linked_List_Animation
+  DEP_FILE = CMakeFiles\Linked_List_Animation.dir\Drawables\TextBox\Label.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
   INCLUDES = -isystem C:/SFML-2.6.1/include
   OBJECT_DIR = CMakeFiles\Linked_List_Animation.dir
-  OBJECT_FILE_DIR = CMakeFiles\Linked_List_Animation.dir\TextBox
+  OBJECT_FILE_DIR = CMakeFiles\Linked_List_Animation.dir\Drawables\TextBox
 
-build CMakeFiles/Linked_List_Animation.dir/TextBox/Cursor.cpp.obj: CXX_COMPILER__Linked_List_Animation_unscanned_Debug C$:/Users/jnmen/CLionProjects/Linked_List_Animation/TextBox/Cursor.cpp || cmake_object_order_depends_target_Linked_List_Animation
-  DEP_FILE = CMakeFiles\Linked_List_Animation.dir\TextBox\Cursor.cpp.obj.d
+build CMakeFiles/Linked_List_Animation.dir/Drawables/TextBox/Cursor.cpp.obj: CXX_COMPILER__Linked_List_Animation_unscanned_Debug C$:/Users/jnmen/CLionProjects/Linked_List_Animation/Drawables/TextBox/Cursor.cpp || cmake_object_order_depends_target_Linked_List_Animation
+  DEP_FILE = CMakeFiles\Linked_List_Animation.dir\Drawables\TextBox\Cursor.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
   INCLUDES = -isystem C:/SFML-2.6.1/include
   OBJECT_DIR = CMakeFiles\Linked_List_Animation.dir
-  OBJECT_FILE_DIR = CMakeFiles\Linked_List_Animation.dir\TextBox
+  OBJECT_FILE_DIR = CMakeFiles\Linked_List_Animation.dir\Drawables\TextBox
 
 build CMakeFiles/Linked_List_Animation.dir/States/States.cpp.obj: CXX_COMPILER__Linked_List_Animation_unscanned_Debug C$:/Users/jnmen/CLionProjects/Linked_List_Animation/States/States.cpp || cmake_object_order_depends_target_Linked_List_Animation
   DEP_FILE = CMakeFiles\Linked_List_Animation.dir\States\States.cpp.obj.d
@@ -140,6 +140,27 @@ build CMakeFiles/Linked_List_Animation.dir/Drawables/Arrowshape/Arrowshape.cpp.o
   OBJECT_DIR = CMakeFiles\Linked_List_Animation.dir
   OBJECT_FILE_DIR = CMakeFiles\Linked_List_Animation.dir\Drawables\Arrowshape
 
+build CMakeFiles/Linked_List_Animation.dir/System.cpp.obj: CXX_COMPILER__Linked_List_Animation_unscanned_Debug C$:/Users/jnmen/CLionProjects/Linked_List_Animation/System.cpp || cmake_object_order_depends_target_Linked_List_Animation
+  DEP_FILE = CMakeFiles\Linked_List_Animation.dir\System.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -isystem C:/SFML-2.6.1/include
+  OBJECT_DIR = CMakeFiles\Linked_List_Animation.dir
+  OBJECT_FILE_DIR = CMakeFiles\Linked_List_Animation.dir
+
+build CMakeFiles/Linked_List_Animation.dir/Drawables/NodeShape/NodeShape.cpp.obj: CXX_COMPILER__Linked_List_Animation_unscanned_Debug C$:/Users/jnmen/CLionProjects/Linked_List_Animation/Drawables/NodeShape/NodeShape.cpp || cmake_object_order_depends_target_Linked_List_Animation
+  DEP_FILE = CMakeFiles\Linked_List_Animation.dir\Drawables\NodeShape\NodeShape.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -isystem C:/SFML-2.6.1/include
+  OBJECT_DIR = CMakeFiles\Linked_List_Animation.dir
+  OBJECT_FILE_DIR = CMakeFiles\Linked_List_Animation.dir\Drawables\NodeShape
+
+build CMakeFiles/Linked_List_Animation.dir/LinkedList/LinkedList.cpp.obj: CXX_COMPILER__Linked_List_Animation_unscanned_Debug C$:/Users/jnmen/CLionProjects/Linked_List_Animation/LinkedList/LinkedList.cpp || cmake_object_order_depends_target_Linked_List_Animation
+  DEP_FILE = CMakeFiles\Linked_List_Animation.dir\LinkedList\LinkedList.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -isystem C:/SFML-2.6.1/include
+  OBJECT_DIR = CMakeFiles\Linked_List_Animation.dir
+  OBJECT_FILE_DIR = CMakeFiles\Linked_List_Animation.dir\LinkedList
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Linked_List_Animation
@@ -148,7 +169,7 @@ build CMakeFiles/Linked_List_Animation.dir/Drawables/Arrowshape/Arrowshape.cpp.o
 #############################################
 # Link the executable Linked_List_Animation.exe
 
-build Linked_List_Animation.exe: CXX_EXECUTABLE_LINKER__Linked_List_Animation_Debug CMakeFiles/Linked_List_Animation.dir/main.cpp.obj CMakeFiles/Linked_List_Animation.dir/Application.cpp.obj CMakeFiles/Linked_List_Animation.dir/TextBox/TextBox.cpp.obj CMakeFiles/Linked_List_Animation.dir/TextBox/LetterObject.cpp.obj CMakeFiles/Linked_List_Animation.dir/TextBox/Label.cpp.obj CMakeFiles/Linked_List_Animation.dir/TextBox/Cursor.cpp.obj CMakeFiles/Linked_List_Animation.dir/States/States.cpp.obj CMakeFiles/Linked_List_Animation.dir/MouseEvents/MouseEvents.cpp.obj CMakeFiles/Linked_List_Animation.dir/KeyboardShortcuts/KeyboardShortcuts.cpp.obj CMakeFiles/Linked_List_Animation.dir/History/History.cpp.obj CMakeFiles/Linked_List_Animation.dir/GUIComponents/snapshot/Snapshot.cpp.obj CMakeFiles/Linked_List_Animation.dir/Font/FontManager.cpp.obj CMakeFiles/Linked_List_Animation.dir/Drawables/Arrowshape/Arrowshape.cpp.obj | C$:/SFML-2.6.1/lib/libsfml-graphics-d.a C$:/SFML-2.6.1/lib/libsfml-window-d.a C$:/SFML-2.6.1/lib/libsfml-system-d.a
+build Linked_List_Animation.exe: CXX_EXECUTABLE_LINKER__Linked_List_Animation_Debug CMakeFiles/Linked_List_Animation.dir/main.cpp.obj CMakeFiles/Linked_List_Animation.dir/Application.cpp.obj CMakeFiles/Linked_List_Animation.dir/Drawables/TextBox/TextBox.cpp.obj CMakeFiles/Linked_List_Animation.dir/Drawables/TextBox/LetterObject.cpp.obj CMakeFiles/Linked_List_Animation.dir/Drawables/TextBox/Label.cpp.obj CMakeFiles/Linked_List_Animation.dir/Drawables/TextBox/Cursor.cpp.obj CMakeFiles/Linked_List_Animation.dir/States/States.cpp.obj CMakeFiles/Linked_List_Animation.dir/MouseEvents/MouseEvents.cpp.obj CMakeFiles/Linked_List_Animation.dir/KeyboardShortcuts/KeyboardShortcuts.cpp.obj CMakeFiles/Linked_List_Animation.dir/History/History.cpp.obj CMakeFiles/Linked_List_Animation.dir/GUIComponents/snapshot/Snapshot.cpp.obj CMakeFiles/Linked_List_Animation.dir/Font/FontManager.cpp.obj CMakeFiles/Linked_List_Animation.dir/Drawables/Arrowshape/Arrowshape.cpp.obj CMakeFiles/Linked_List_Animation.dir/System.cpp.obj CMakeFiles/Linked_List_Animation.dir/Drawables/NodeShape/NodeShape.cpp.obj CMakeFiles/Linked_List_Animation.dir/LinkedList/LinkedList.cpp.obj | C$:/SFML-2.6.1/lib/libsfml-graphics-d.a C$:/SFML-2.6.1/lib/libsfml-window-d.a C$:/SFML-2.6.1/lib/libsfml-system-d.a
   FLAGS = -g
   LINK_LIBRARIES = C:/SFML-2.6.1/lib/libsfml-graphics-d.a  C:/SFML-2.6.1/lib/libsfml-window-d.a  C:/SFML-2.6.1/lib/libsfml-system-d.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Linked_List_Animation.dir

@@ -6,19 +6,19 @@
 #define TEXT_INPUT_PROJECT_APPLICATION_H
 #include <SFML/Graphics/RenderWindow.hpp>
 #include <SFML/Window/Event.hpp>
-#include "TextBox/LetterObject.h"
-
-
 #include <iostream>
-
-#include "TextBox/TextBox.h"
+#include "System.h"
+#include "Drawables/EnumDrawables/EnumDrawables.h"
 #include "History/History.h"
 
 
 class Application {
 private:
     sf::RenderWindow window;        //This is the window that will be displayed
-    TextBox textBox;                //This is the text box that will be displayed
+    System system;                  //This is the system that will be displayed
+
+    Drawables command;
+
 
 public:
     Application();
