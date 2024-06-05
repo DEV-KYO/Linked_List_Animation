@@ -25,20 +25,20 @@ public:
 
     //Runs the application & main loop
     //It will run a while loop that will process events, update, and render
-    void run();
+    void Run();
 
     //Function called to draw function of any object
     //that needs to be drawn on the window
-    void draw();
+    void Draw();
 
     //This function processes events that are happening in the window
-    void processEvents();
+    void ProcessEvents();
 
     //This function updates the state of the application
-    void update();
+    void Update();
 
     //Renders all objects to the window
-    void render();
+    void Render();
 };
 
 

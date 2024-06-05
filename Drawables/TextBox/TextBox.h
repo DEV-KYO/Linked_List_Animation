@@ -68,7 +68,7 @@ public:
     sf::FloatRect getLocalBounds() const;                                           //Returns the local bounds of the text box
     sf::FloatRect getGlobalBounds() const;                                          //Returns the global bounds of the text box
     sf::RectangleShape& getShape();                                                 //Returns the shape of the text box
-
+    std::vector<LetterObject>& getLetters();                                        //Returns the vector of letters
 
 };
 

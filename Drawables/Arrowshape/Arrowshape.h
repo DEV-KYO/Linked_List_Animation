@@ -27,6 +27,7 @@ public:
     void update();             // Updates the arrow shape
 
     void move(sf::Vector2<float> offset);//function to move the arrow
+    void zoom(float factor);//function to zoom the arrow (scale the arrow)
     void rotate(float angle);//function to rotate the arrow
 
 

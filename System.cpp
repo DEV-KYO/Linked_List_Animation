@@ -4,22 +4,13 @@
 
 #include "System.h"
 
-System::System() : moveFactor(1.0f), testArrow({100,100}, Direction::RIGHT) {
+System::System() : moveFactor(1.0f), testNode(NodeShape("14")) {
     // Default constructor
     textBox = TextBox();
 
 
     //FOR TESTING//
-    testNode = NodeShape({50,50 });
     testNode.setPosition({300,400});
-
-    rect = sf::RectangleShape({200,200});
-    rect.setOrigin({100,100});
-    rect.setFillColor({0,0,0,0});
-    rect.setOutlineThickness(1.0f);
-    rect.setOutlineColor(sf::Color::White);
-    rect.setPosition({200  ,200});
-
 
 }
 
@@ -42,6 +33,14 @@ void System::Event(sf::RenderWindow& window, sf::Event& event, Drawables command
             textBox.addEventHandler(window, event);
         break;
 
+        case sf::Event::MouseWheelScrolled:
+            if(event.mouseWheelScroll.delta > 0) {
+                testNode.zoom(1.1f);
+            } else if(event.mouseWheelScroll.delta < 0) {
+                testNode.zoom(0.9f);
+            }
+        break;
+
         //Key Pressed
         case sf::Event::KeyPressed:
 
@@ -51,6 +50,18 @@ void System::Event(sf::RenderWindow& window, sf::Event& event, Drawables command
 
             //This switch statement will determine what key was pressed
             switch(event.key.code) {
+                //Enter key
+                case sf::Keyboard::Return:
+                    letters = textBox.getLetters();
+                    if(!letters.empty()) {
+                        std::cout << "setting data to letter" << std::endl;
+                        testNode.setData({5});
+                    }
+                    else {
+                        std::cout << "No letters to display" << std::endl;
+                    }
+                break;
+
                 //Escape key
                 case sf::Keyboard::Escape:
                     window.close();
@@ -82,7 +93,9 @@ void System::Event(sf::RenderWindow& window, sf::Event& event, Drawables command
 
         // This event is triggered when text is entered
         case sf::Event::TextEntered:
-            textBox.addEventHandler(window, event);
+            if (std::isdigit(static_cast<char>(event.text.unicode))) {
+                textBox.addEventHandler(window, event);
+            }
         break;
     }
 }
@@ -98,5 +111,4 @@ void System::Draw(sf::RenderWindow& window) {
     window.draw(textBox);
 
     window.draw(testNode);
-    window.draw(rect);
 }

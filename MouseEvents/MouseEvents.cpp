@@ -31,7 +31,6 @@ void MouseEvents<T>::countClicks(sf::Event event) {
 
 template<class T>
 bool MouseEvents<T>::mouseClicked(T &object, sf::RenderWindow &window) {
-    sf::FloatRect bounds = object.getGlobalBounds();
     return  MouseEvents<T>::hovered(object,window) &&
             sf::Mouse::isButtonPressed(sf::Mouse::Left);
 }

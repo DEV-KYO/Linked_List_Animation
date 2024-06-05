@@ -15,17 +15,18 @@ class System {
 private:
     float moveFactor; //factor to move the arrow
     TextBox textBox; //text box to display text
-
+    std::vector<LetterObject> letters; //letters to display
     //FOR TESTING//
-    Arrowshape testArrow; //arrow to test
     NodeShape testNode; //node to test
-    sf::RectangleShape rect; //rectangle to test
+
 
 public:
     System();
     void Event(sf::RenderWindow& window, sf::Event& event, Drawables command); //function to update the system
     void Update(); //function to update the system
     void Draw(sf::RenderWindow& window); //function to draw the system
+
+    void handleLetters(const std::vector<LetterObject>& letters); //function to handle letters
 
 };
 

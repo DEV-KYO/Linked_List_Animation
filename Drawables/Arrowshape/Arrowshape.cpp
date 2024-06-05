@@ -11,12 +11,12 @@ Arrowshape::Arrowshape(const sf::Vector2f &size, Direction direction) : triangle
     // Constructor with size and direction
     // /////////////////////////////////////////////////////////////////////
     //                    --OUTLINE-- ERASE WHEN DONE                    //
-    triangle.setFillColor(sf::Color(0,0,0,0));
+    triangle.setFillColor(sf::Color(0,0,0));
     triangle.setOutlineColor(sf::Color({0,255,0}));
     triangle.setOutlineThickness(1.0f);
 
-    line.setFillColor(sf::Color(0,0,0,0));
-    line.setOutlineColor(sf::Color({0,0,255}));
+    line.setFillColor(sf::Color(0,0,0));
+    line.setOutlineColor(sf::Color({0,255,0}));
     line.setOutlineThickness(1.0f);
     // /////////////////////////////////////////////////////////////////////
 
@@ -53,7 +53,6 @@ Arrowshape::Arrowshape(const sf::Vector2f &size, Direction direction) : triangle
 void Arrowshape::draw(sf::RenderTarget &window, sf::RenderStates states) const {
     // Draws the arrow shape
     states.transform = line.getTransform();
-
     window.draw(line);
     window.draw(triangle, states);
 }
@@ -68,6 +67,11 @@ void Arrowshape::update() {
 void Arrowshape::move(sf::Vector2<float> offset) {
     //function to move the arrow
     line.move(offset);
+}
+
+void Arrowshape::zoom(float factor) {
+    //function to zoom the arrow (scale the arrow)
+    line.scale(factor, factor);
 }
 
 void Arrowshape::rotate(float angle) {
@@ -89,8 +93,6 @@ float Arrowshape::point(Direction direction) {
             return 90.0f;
     }
 }
-
-
 
 
 void Arrowshape::setDirection(Direction direction) {

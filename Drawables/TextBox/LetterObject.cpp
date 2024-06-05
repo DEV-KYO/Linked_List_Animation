@@ -45,9 +45,8 @@ void LetterObject::setState(ObjectState state) {
     if(state == ENABLED)
         text.setFillColor(sf::Color::White);
     else {
-        text.setFillColor(sf::Color::Red);
+        text.setFillColor({128,128, 128, 90});
     }
-
     //Can further improve this functionality,
     //you would not want to change the color of the text to 'RED'
 }

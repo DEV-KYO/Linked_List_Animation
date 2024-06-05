@@ -8,12 +8,24 @@
 
 template <typename T>
 class Node {
-public:
+private:
     T data;
-    Node* next;
-    Node* prev;
-    explicit Node(const NodeShape& data, Node* next = nullptr, Node* prev = nullptr) : data(data), next(next), prev(prev) {}
+    Node<T>* next;
+
+public:
+    Node(const T& data, Node<T>* next = nullptr);
+
+    void setData(const T& data);
+
+    T getData() const;
+
+    void setNext(Node<T>* next);
+
+    Node* getNext() const;
 
 };
+
+#include "Node.cpp"
+
 
 #endif //NODE_H

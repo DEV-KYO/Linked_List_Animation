@@ -44,6 +44,7 @@ add_executable(${PROJECT_NAME} main.cpp
         LinkedList/LinkedList.cpp
         LinkedList/LinkedList.h
         LinkedList/Node.h
+        LinkedList/Node.cpp
 
 )
 

@@ -7,18 +7,18 @@
 #include "Node.h"
 #include <List>
 
-
+template<typename T>
 class LinkedList {
 private:
-    std::list<NodeShape> nodes; //list of nodes
+    std::list<Node<T>*> nodes; //list of nodes
 
 public:
-    void addNode(const NodeShape& node); //function to add a node to the list
+    void addNode(Node<T>* node); //function to add a node to the list
 
-    std::list<NodeShape> getNodes(); //function to get the list of nodes
+    std::list<Node<T>*> getNodes(); //function to get the list of nodes
 
 };
 
-
+#include "LinkedList.cpp"
 
 #endif //LINKEDLIST_H

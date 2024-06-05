@@ -40,10 +40,10 @@ void TextBox::draw(sf::RenderTarget &window, sf::RenderStates states) const {
 // Add an event handler to the text box
 void TextBox::addEventHandler(sf::RenderWindow &window, sf::Event event) {
     if(event.type == sf::Event::MouseButtonPressed) {
-        if (MouseEvents<sf::RectangleShape>::mouseClicked(shape, window)) {
+        if (!isEnabled() && MouseEvents<sf::RectangleShape>::mouseClicked(shape, window)) {
             std::cout << "Mouse Clicked on TextBox" << std::endl;
             setState(ENABLED);
-        } else {
+        } else if(isEnabled()) {
             std::cout << "Mouse Clicked outside TextBox" << std::endl;
             setState(DISABLED);
         }
@@ -159,21 +159,25 @@ void TextBox::setState(ObjectState state) {
     }
 }
 
-// Add a snapshot of the text box
+// Get the local bounds of the text box shape
 sf::FloatRect TextBox::getLocalBounds() const {
     return shape.getLocalBounds();
 }
 
-// Add a snapshot of the text box
+// Get the global bounds of the text box shape
 sf::FloatRect TextBox::getGlobalBounds() const {
     return shape.getGlobalBounds();
 }
 
-// Add a snapshot of the text box
+// Get the shape of the text box
 sf::RectangleShape &TextBox::getShape() {
     return shape;
 }
 
+// Get the letters vector
+std::vector<LetterObject> &TextBox::getLetters() {
+    return letters;
+}
 
 
 

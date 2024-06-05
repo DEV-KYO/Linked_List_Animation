@@ -8,7 +8,7 @@ int main() {
     Application app;
 
     //run the application
-    app.run();
+    app.Run();
 
     //end of program
     std::cout   << std::endl

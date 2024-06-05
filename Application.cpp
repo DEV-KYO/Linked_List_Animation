@@ -25,7 +25,7 @@ Application::Application() {
 }
 
 
-void Application::run() {
+void Application::Run() {
 
     std::cout   << "APPLICATION STARTING"
                 << std::endl;
@@ -33,9 +33,9 @@ void Application::run() {
     //Main loop of the application
     while (window.isOpen())
     {
-        processEvents();
-        update();
-        render();
+        ProcessEvents();
+        Update();
+        Render();
     }
 
     std::cout   << std::endl
@@ -43,7 +43,7 @@ void Application::run() {
                 << std::endl;
 }
 
-void Application::processEvents() {
+void Application::ProcessEvents() {
 
     //The event loop that will process all events that are happening in the window
     //This loop will run as long as there are events to process
@@ -54,17 +54,17 @@ void Application::processEvents() {
     }
 }
 
-void Application::update()
+void Application::Update()
 {
     system.Update();
 }
 
-void Application::render() {
+void Application::Render() {
     window.clear({sf::Color::Black});
-    draw();
+    Draw();
     window.display();
 }
 
-void Application::draw() {
+void Application::Draw() {
     system.Draw(window);
 }
