@@ -4,17 +4,20 @@
 
 #include "System.h"
 
-System::System() : moveFactor(1.0f), testNode(NodeShape("14")) {
+System::System() : moveFactor(1.0f) {
     // Default constructor
     textBox = TextBox();
+    list = AnimatedLinkedList();
+    inputMode = EnumInputMode::LINKEDLIST;
+    listFunction = EnumListFunctions::PUSH_BACK;
 
 
     //FOR TESTING//
-    testNode.setPosition({300,400});
+    // testNode.setPosition({300,400});
 
 }
 
-void System::Event(sf::RenderWindow& window, sf::Event& event, Drawables command) {
+void System::Event(sf::RenderWindow& window, sf::Event& event) {
 
     //switch statement that determines what type of event is happening
     //Events can be anything from closing the window to pressing a key
@@ -35,9 +38,9 @@ void System::Event(sf::RenderWindow& window, sf::Event& event, Drawables command
 
         case sf::Event::MouseWheelScrolled:
             if(event.mouseWheelScroll.delta > 0) {
-                testNode.zoom(1.1f);
+                list.zoom(1.1f);
             } else if(event.mouseWheelScroll.delta < 0) {
-                testNode.zoom(0.9f);
+                list.zoom(0.9f);
             }
         break;
 
@@ -51,15 +54,34 @@ void System::Event(sf::RenderWindow& window, sf::Event& event, Drawables command
             //This switch statement will determine what key was pressed
             switch(event.key.code) {
                 //Enter key
+                case sf::Keyboard::Tab:
+                    //Change the input mode
+                    break;
+                //Change listfunction mode
+                case sf::Keyboard::Up:
+                    //Change the list function up
+                    if(listFunction != EnumListFunctions::PUSH_BACK) {
+                        listFunction = static_cast<EnumListFunctions>(static_cast<int>(listFunction) - 1);
+                    }
+                    std::cout << "~MODE: " << enumToString(listFunction) << std::endl;
+                break;
+
+                case sf::Keyboard::Down:
+                    //Change the list function down
+                    if(listFunction != EnumListFunctions::CLEAR) {
+                        listFunction = static_cast<EnumListFunctions>(static_cast<int>(listFunction) + 1);
+                    }
+                    std::cout << "~MODE: " << enumToString(listFunction) << std::endl;
+                break;
+
                 case sf::Keyboard::Return:
-                    letters = textBox.getLetters();
-                    if(!letters.empty()) {
-                        std::cout << "setting data to letter" << std::endl;
-                        testNode.setData({5});
-                    }
-                    else {
-                        std::cout << "No letters to display" << std::endl;
-                    }
+                    handleReturn();
+                break;
+
+                //Backspace key
+                case sf::Keyboard::BackSpace:
+                    textBox.removeLetter();
+                data = textBox.getStringOfLetters();
                 break;
 
                 //Escape key
@@ -67,33 +89,14 @@ void System::Event(sf::RenderWindow& window, sf::Event& event, Drawables command
                     window.close();
                 break;
 
-                //Backspace key
-                case sf::Keyboard::BackSpace:
-                    textBox.removeLetter();
-                break;
 
-                case sf::Keyboard::Up:
-                    testNode.move({0,-1});
-                break;
 
-                case sf::Keyboard::Down:
-                    testNode.move({0,1});
-                break;
-                case sf::Keyboard::Left:
-                    testNode.move({-1,0});
-                break;
-                case sf::Keyboard::Right:
-                    testNode.move({1,0});
-                break;
-                case sf::Keyboard::R:
-                    testNode.rotate(90);
-                break;
             }
         break;
 
         // This event is triggered when text is entered
         case sf::Event::TextEntered:
-            if (std::isdigit(static_cast<char>(event.text.unicode))) {
+            if (std::isdigit(static_cast<char>(event.text.unicode)) || event.text.unicode == 32) {
                 textBox.addEventHandler(window, event);
             }
         break;
@@ -103,12 +106,64 @@ void System::Event(sf::RenderWindow& window, sf::Event& event, Drawables command
 void System::Update() {
     // Update the system
     textBox.update();
+    list.update();
 
 }
 
 void System::Draw(sf::RenderWindow& window) {
     // Draw the system
     window.draw(textBox);
+    list.draw(window, sf::RenderStates::Default);
+}
 
-    window.draw(testNode);
+void System::handleReturn() {
+    // Handle the return key
+    data = textBox.getStringOfLetters();
+    switch(inputMode) {
+        case EnumInputMode::LINKEDLIST:
+            switch(listFunction) {
+                case EnumListFunctions::PUSH_BACK:
+                    if(!data.empty() && data != " ") {
+                        list.push_back(data);
+                    }
+                break;
+
+                case EnumListFunctions::PUSH_FRONT:
+                    list.push_front(data);
+                break;
+
+                case EnumListFunctions::POP_BACK:
+                    list.pop_back();
+                break;
+
+                case EnumListFunctions::POP_FRONT:
+                    list.pop_front();
+                break;
+
+                case EnumListFunctions::CLEAR:
+                    list.clear();
+                break;
+            }
+            std::cout << "LIST: " << enumToString(listFunction) << std::endl;
+        break;
+    }
+    textBox.clear();
+    data = "";
+}
+
+std::string System::enumToString(EnumListFunctions listFunction) {
+    switch(listFunction) {
+        case EnumListFunctions::PUSH_BACK:
+            return "PUSH_BACK";
+        case EnumListFunctions::PUSH_FRONT:
+            return "PUSH_FRONT";
+        case EnumListFunctions::POP_BACK:
+            return "POP_BACK";
+        case EnumListFunctions::POP_FRONT:
+            return "POP_FRONT";
+        case EnumListFunctions::CLEAR:
+            return "CLEAR";
+        default:
+            return "UNKNOWN";
+    }
 }

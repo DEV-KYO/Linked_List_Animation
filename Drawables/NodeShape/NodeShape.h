@@ -25,29 +25,37 @@ private:
 
     sf::Vector2f nodeSize;
 
-    std::any data;
+    std::string data;
     sf::Font font;
     sf::Text text;
 
 public:
-
-    NodeShape(const std::string& data);
+    //Constructors
+    NodeShape();
+    explicit NodeShape(const std::string& data);
     NodeShape(const sf::Vector2f &size, const std::string& data);
+
+    //Functions
     void update();
     void draw(sf::RenderTarget& window, sf::RenderStates states) const override;
     void setPosition(const sf::Vector2f &position);
 
+    //Transformations
     void rotate(float angle);
+    void headPointer();
     void move(sf::Vector2<float> offset);
     void zoom(float factor);
 
+    //Bounds
     void getLocalBounds(sf::FloatRect& rect) const;
 
-    void setData(const std::any& data);
+    //Setters
+    void setData(const std::string& data);
     void setFont(EnumFonts font);
     void setFontSize(unsigned int size);
 
-    std::any getData() const;
+    //Getters
+    std::string getData() const;
 };
 
 

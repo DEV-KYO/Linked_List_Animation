@@ -17,8 +17,6 @@ private:
     sf::RenderWindow window;        //This is the window that will be displayed
     System system;                  //This is the system that will be displayed
 
-    Drawables command;
-
 
 public:
     Application();

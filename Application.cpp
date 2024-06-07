@@ -6,11 +6,11 @@
 
 #include "KeyboardShortcuts/KeyboardShortcuts.h"
 
-Application::Application() {
+Application::Application() : system() {
 
     //Create the window with a resolution of "pixelWidth" x "pixelHeight"
-    unsigned int pixelWidth = 600; ///sf::VideoMode::getDesktopMode().width;
-    unsigned int pixelHeight = 800; ///sf::VideoMode::getDesktopMode().height;
+    unsigned int pixelWidth = 1600; ///sf::VideoMode::getDesktopMode().width;
+    unsigned int pixelHeight = 900; ///sf::VideoMode::getDesktopMode().height;
 
     //Create the window using given resolution and title
     window.create(sf::VideoMode(
@@ -21,7 +21,7 @@ Application::Application() {
     //Set the framerate limit to 60
     window.setFramerateLimit(60);
 
-    system = System();
+
 }
 
 
@@ -50,7 +50,7 @@ void Application::ProcessEvents() {
     sf::Event event;
     while(window.pollEvent(event))
     {
-        system.Event(window, event, command);
+        system.Event(window, event);
     }
 }
 

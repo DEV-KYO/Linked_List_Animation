@@ -47,8 +47,6 @@ void LetterObject::setState(ObjectState state) {
     else {
         text.setFillColor({128,128, 128, 90});
     }
-    //Can further improve this functionality,
-    //you would not want to change the color of the text to 'RED'
 }
 
 sf::FloatRect LetterObject::getLocalBounds() const {

@@ -145,6 +145,18 @@ void TextBox::removeLetter() {
     }
 }
 
+// Clear the text box
+void TextBox::clear() {
+    // Clear the letters vector
+    letters.clear();
+    text.clear();
+    // Get a snapshot of the text box
+    getSnapshot();
+
+    // Create a snapshot and push it to the history stack
+    History::pushHistory({text_box_snapshot, this});
+}
+
 // Check if the text box is enabled
 bool TextBox::isEnabled() const {
     return active.getState();
@@ -174,9 +186,33 @@ sf::RectangleShape &TextBox::getShape() {
     return shape;
 }
 
+long TextBox::getSize() const {
+    // Get the size of the text box
+    return text.size();
+}
+
 // Get the letters vector
-std::vector<LetterObject> &TextBox::getLetters() {
-    return letters;
+std::vector<std::string> TextBox::getVectorOfLetters() {
+    text.reserve(letters.size());
+    for (auto &letter : letters) {
+        text.push_back(convertText(letter));
+    }
+    return text;
+}
+
+// Get the string of letters
+std::string TextBox::getStringOfLetters() {
+    std::string s;
+    for (auto &letter : letters) {
+        s += convertText(letter);
+    }
+    return s;
+}
+
+std::string TextBox::convertText(const LetterObject &letter) {
+    std::string c;
+    c = letter.getCharacter();
+    return c;
 }
 
 

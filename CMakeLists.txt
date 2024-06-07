@@ -41,10 +41,12 @@ add_executable(${PROJECT_NAME} main.cpp
         Drawables/EnumDrawables/EnumDrawables.h
         Drawables/NodeShape/NodeShape.cpp
         Drawables/NodeShape/NodeShape.h
-        LinkedList/LinkedList.cpp
-        LinkedList/LinkedList.h
+        LinkedList/AnimatedLinkedList.cpp
+        LinkedList/AnimatedLinkedList.h
         LinkedList/Node.h
         LinkedList/Node.cpp
+        System/EnumSystem/EnumInputMode.h
+        LinkedList/EnumListFunctions.h
 
 )
 

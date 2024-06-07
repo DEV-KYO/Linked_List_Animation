@@ -43,6 +43,7 @@ private:
 
     //Vectors
     std::vector<LetterObject> letters;  //Vector of letters
+    std::vector<std::string> text;
 
 
 public:
@@ -56,9 +57,12 @@ public:
     Snapshot& getSnapshot() override;                                               //Returns the snapshot of the text box
     void applySnapshot(const Snapshot& snapshot) override;                          //Applies the snapshot to the text box
 
+
     //TextBox functions
     void addLetter(LetterObject addedLetter);
     void removeLetter();
+
+    void clear();
 
     //Setters
     void setState(ObjectState state);                                               //Sets the state of the text box
@@ -68,8 +72,10 @@ public:
     sf::FloatRect getLocalBounds() const;                                           //Returns the local bounds of the text box
     sf::FloatRect getGlobalBounds() const;                                          //Returns the global bounds of the text box
     sf::RectangleShape& getShape();                                                 //Returns the shape of the text box
-    std::vector<LetterObject>& getLetters();                                        //Returns the vector of letters
-
+    long getSize() const;                                                           //Returns the size of the text box
+    std::vector<std::string> getVectorOfLetters();                                         //Returns the vector of letters
+    std::string getStringOfLetters();                                               //Returns the string of letters
+    static std::string convertText(const LetterObject &letter) ;                                                        //Returns the text of the text box
 };
 
 
